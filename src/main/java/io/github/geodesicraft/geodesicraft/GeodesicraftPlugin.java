@@ -7,7 +7,7 @@ public class GeodesicraftPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("Geodesicraft has been enabled!");
-        // Register event listeners or commands here
+        getCommand("geodesic").setExecutor(new GeodesicCommand());
     }
 
     @Override

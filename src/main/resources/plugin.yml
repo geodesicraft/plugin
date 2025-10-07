@@ -1,6 +1,14 @@
 name: Geodesicraft
 version: 1.0
 main: io.github.geodesicraft.geodesicraft.GeodesicraftPlugin
-api-version: 1.21.9
+api-version: 1.21
 authors: [comfysquirrel]
 description: Create geodesic domes
+
+commands:
+  geodesic:
+    description: Create a geodesic dome.
+    usage: /geodesic
+    aliases: [geo]
+    permission: geodesicraft.geodesic
+    permission-message: You do not have permission to use this command.
