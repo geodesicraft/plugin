@@ -15,6 +15,7 @@ repositories {
         content {
             includeGroup 'org.bukkit'
             includeGroup 'org.spigotmc'
+//            includeGroup 'com.sk89q.worldedit.worldedit-core'
         }
     }
     /*
@@ -28,13 +29,18 @@ repositories {
     */
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
-    // mavenLocal() // This is needed for CraftBukkit and Spigot.
+//     mavenLocal() // This is needed for CraftBukkit and Spigot.
+
+    maven { url = 'https://maven.enginehub.org/repo/' }
 }
 
 dependencies {
     // Pick only one of these and read the comment in the repositories block.
     compileOnly 'org.spigotmc:spigot-api:1.21.9-R0.1-SNAPSHOT' // The Spigot API with no shadowing. Requires the OSS repo.
 //    compileOnly 'org.spigotmc:spigot:1.20.2-R0.1-SNAPSHOT' // The full Spigot server with no shadowing. Requires mavenLocal.
+
+    compileOnly 'com.sk89q.worldedit:worldedit-core:7.3.16-SNAPSHOT'
+//    implementation 'com.google.guava:guava:33.4.8-jre'
 }
 
 jar {
